@@ -56,9 +56,10 @@ itau-design-system/
 │   ├── dossie-itau.md                A pesquisa, com fonte por fato
 │   └── COMPONENTES.md                O índice dos componentes
 ├── prompts/
+│   ├── CHATGPT.md                    Como pôr o sistema no ChatGPT, com os prompts prontos
 │   ├── CLAUDE.md                     Para Claude e Claude Code
 │   ├── AGENTS.md                     Para Codex e agentes que leem AGENTS.md
-│   └── COWORK-GOOGLE-SLIDES.md       Para o Cowork do GPT montar isto no Google Slides
+│   └── COWORK-GOOGLE-SLIDES.md       Para montar isto no Google Slides
 ├── NOTICE.md                         O que você pode e o que não pode reusar
 └── CHANGELOG.md
 ```
@@ -144,13 +145,14 @@ Nunca monte um slide a partir de uma classe CSS achada no arquivo. A classe é c
 
 ## Usar com agente de IA
 
-A pasta [`prompts/`](prompts/) tem três arquivos, um por ferramenta:
+A pasta [`prompts/`](prompts/) tem quatro arquivos, um por ferramenta:
 
 | Arquivo | Para quem | O que faz |
 |---|---|---|
+[`prompts/CHATGPT.md`](prompts/CHATGPT.md) | **Comece por aqui se você usa ChatGPT** | Como pôr o sistema dentro do ChatGPT e os prompts prontos. Explica por que o ChatGPT não consegue clonar o repositório, e o que fazer em vez disso. |
 [`prompts/CLAUDE.md`](prompts/CLAUDE.md) | Claude e Claude Code | Carrega o sistema e as regras duras. Copie para a raiz do seu projeto. |
-[`prompts/AGENTS.md`](prompts/AGENTS.md) | Codex e qualquer agente que leia `AGENTS.md` | O mesmo contrato, no formato que o Codex procura. |
-[`prompts/COWORK-GOOGLE-SLIDES.md`](prompts/COWORK-GOOGLE-SLIDES.md) | Cowork do GPT | Prompt pronto para o Cowork montar este sistema direto no Google Slides. |
+[`prompts/AGENTS.md`](prompts/AGENTS.md) | Codex e qualquer agente que leia `AGENTS.md` | O mesmo contrato, no formato que o Codex procura. Copie para a raiz do repositório e ele entra sozinho. |
+[`prompts/COWORK-GOOGLE-SLIDES.md`](prompts/COWORK-GOOGLE-SLIDES.md) | Cowork, ChatGPT Work e Codex | Prompt pronto para montar este sistema direto no Google Slides, com a conversão de medidas. |
 
 ---
 
