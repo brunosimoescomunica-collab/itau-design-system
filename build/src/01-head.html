@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="pt-BR" data-mode="light" data-ui="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itaú × Africa Creative/™ — Template de Slides</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23FF6200'/></svg>">
+<style>
+/* ════════════════════════════════════════════════════════════════════
+   ITAÚ × AFRICA CREATIVE/™ — TEMPLATE DE SLIDES · v1.0
+   Derivado de itau-brand-tokens.json v1.0. A lei está no README.md.
+
+   SUPERFÍCIE ITAÚ, ASSINATURA AFRICA.
+   O que se vê é do cliente: branco, laranja #FF6200, a pedra, a Itau
+   Display em caixa baixa, as quinas de 16px. O que se sente é da agência:
+   a grade de 12 colunas, o filete de 1px, a legenda miúda contra o título
+   gigante, o dado em Light, o selo no canto e o fecho em Pangaia.
+
+   O MÉTODO É O DO TEMPLATE DA GUT: o deck ensina mostrando. Cada modelo é
+   um slide pronto, com texto de exemplo que nomeia o próprio estilo. As
+   seções editáveis são laranja, marcadas pela pedra branca.
+
+   DUAS FAMÍLIAS DO ITAÚ, TRÊS PAPÉIS (mais duas da Africa, em dois lugares)
+   Itau Display Bold é a voz: capa, título e statement.
+   Itau Text é o texto: Regular no corpo, Bold no subtítulo e na legenda.
+   Itau Display Light é o número.
+   Miletus Grotesk Medium só no anel do selo e na marca d'água.
+   PP Pangaia Light só no fechamento e no slogan.
+
+   AS FONTES DO ITAÚ SÃO PROPRIETÁRIAS. O font stack declara "Itau Display"
+   e "Itau Text" primeiro: onde estiverem instaladas, o deck usa. Embutida
+   vai a Figtree (OFL), o fallback escolhido pela Africa.
+
+   COMO USAR
+   1. Duplique este arquivo para Clientes/Itaú/presentations/<deck>.html
+   2. Apague o que não vai usar. Troque só o conteúdo das <section class="slide">.
+   3. Não mexa no CSS de sistema, no observer nem na UI fixa.
+   4. O fechamento é obrigatório e é sempre o penúltimo. O slogan fecha.
+
+   TECLAS: setas/espaço/j/k · N roteiro · B modo claro-escuro · G grade
+   ════════════════════════════════════════════════════════════════════ */
+@font-face{font-family:"Figtree";src:url("fonts/Figtree-VF-latin.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:block;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Figtree";src:url("fonts/Figtree-VF-latin-ext.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:block;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Miletus Grotesk";src:url("fonts/MiletusGrotesk-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"PP Pangaia";src:url("fonts/PPPangaia-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:block}
+
+/* ───────── TOKENS · os hex do Itaú vêm de tokens_idl/varejo.css do itau.com.br ───────── */
+:root{
+  --laranja:#FF6200; --laranja-d:#E55800; --azul:#000066; --azul-d:#000D3C;
+  --branco:#FFFFFF; --preto:#000000; --cinza-t:#4C4C4C; --cinza-b:#5D636F;
+  --cinza-m:#ADB8B3; --cinza-s:#CFD1D3; --sup-1:#F1F2F4; --sup-2:#E3E5E8;
+  --bg:#FFFFFF; --fg:#000000; --line:#000000;
+  --muted:#4C4C4C; --hair:rgba(0,0,0,.16); --stage:#F1F2F4; --ink:rgba(0,0,0,.06);
+  --acc:#FF6200; --acc-fg:#FFFFFF;
+  --grad:linear-gradient(90deg,#348FFE 0%,#8C6BE1 27%,#FF3CB9 68%,#FF7842 100%);
+  --display:"Itau Display","Figtree","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --text:"Itau Text","Figtree","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --af:"Miletus Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --pangaia:"PP Pangaia",Georgia,"Times New Roman",serif;
+  --e-expo:cubic-bezier(.19,1,.22,1);   /* expo out da Africa = decelerate_02 do Itaú */
+  --e-strong:cubic-bezier(.87,0,.13,1);
+  --e-slow:cubic-bezier(.16,1,.3,1);
+
+  /* A GRADE · herdada da Africa: 12 colunas de 6cqw + 11 calhas de 1.6cqw = 89.6cqw.
+     Span de N colunas = 7.6N - 1.6. */
+  --m:5.2cqw; --col:6cqw; --gutter:1.6cqw; --field:4cqw; --u:.8cqw;
+  /* AS QUINAS · do Itaú: card 16px, botão pequeno 8px, layout 24px */
+  --r:.8cqw; --r-s:.4cqw; --r-l:1.25cqw;
+
+  /* a escala. 1cqw = 19.2px num quadro de 1920 */
+  --t-hero:9.4cqw;     /* capa · Display 700 */
+  --t-stmt:8cqw;       /* statement · Display 700 */
+  --t-ttl:5.6cqw;      /* título · Display 700 */
+  --t-sub:2.6cqw;      /* subtítulo · Text 700 */
+  --t-body-l:2.3cqw;   /* corpo grande */
+  --t-body:1.75cqw;    /* corpo regular */
+  --t-body-s:1.35cqw;  /* corpo pequeno */
+  --t-cap:1cqw;        /* legenda · Text 700 caixa alta */
+  --t-num:15cqw; --t-num-m:7cqw;   /* número · Display 300 */
+
+  /* a UI fixa lê o fundo do slide corrente (JS), nunca o modo da página */
+  --ui-fg:#000000; --ui-mut:#4C4C4C; --ui-bg:#FFFFFF;
+}
+html[data-mode="dark"]{
+  --bg:#000000; --fg:#ffffff; --line:#ffffff;
+  --muted:#ADB8B3; --hair:rgba(255,255,255,.24); --stage:rgba(255,255,255,.06); --ink:rgba(255,255,255,.08);
+}
+html[data-ui="dark"]{--ui-fg:#ffffff; --ui-mut:#ADB8B3; --ui-bg:#000000}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--text);font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  transition:background .5s var(--e-expo),color .5s var(--e-expo)}
+svg{display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ───────── SLIDE E QUADRO ───────── */
+.slide{height:100vh;height:100dvh;width:100%;scroll-snap-align:start;scroll-snap-stop:always;
+  display:grid;place-items:center;overflow:hidden;position:relative}
+.frame{width:min(100vw,177.78vh);aspect-ratio:16/9;container-type:inline-size;
+  position:relative;overflow:hidden;padding:var(--m);display:flex;flex-direction:column}
+/* as superfícies coloridas: a pedra preta, o laranja, o azul do segmento */
+.slide.inv{background:var(--preto);--fg:#ffffff;--line:#ffffff;--muted:#ADB8B3;
+  --hair:rgba(255,255,255,.24);--stage:rgba(255,255,255,.06);--ink:rgba(255,255,255,.1);color:var(--branco)}
+.slide.laranja{background:var(--laranja);--fg:#ffffff;--line:#ffffff;--muted:rgba(255,255,255,.82);
+  --hair:rgba(255,255,255,.32);--stage:rgba(255,255,255,.14);--ink:rgba(255,255,255,.16);
+  --acc:#FFFFFF;--acc-fg:#FF6200;color:var(--branco)}
+.slide.azul{background:var(--azul);--fg:#ffffff;--line:#ffffff;--muted:rgba(255,255,255,.72);
+  --hair:rgba(255,255,255,.26);--stage:rgba(255,255,255,.08);--ink:rgba(255,255,255,.1);color:var(--branco)}
+
+.sp3{width:21.2cqw}.sp4{width:28.8cqw}.sp5{width:36.4cqw}.sp6{width:44cqw}
+.sp7{width:51.6cqw}.sp8{width:59.2cqw}.sp9{width:66.8cqw}.sp10{width:74.4cqw}
+.sp11{width:82cqw}.sp12{width:89.6cqw}
+
+/* ───────── CABEÇALHO CORRENTE ─────────
+   O selo da Africa no canto superior esquerdo, na linha dos botões B e N.
+   Injetado por JS em todo slide que não é .bare. O miolo é o gradiente
+   sobre branco e o mark branco chapado sobre laranja, preto e azul. */
+.hd{position:absolute;left:1.6cqw;top:.9cqw;width:4.4cqw;z-index:3;pointer-events:none}
+.hseal{width:100%}
+.hseal text{font-family:var(--af);font-weight:500;font-size:17px;letter-spacing:.12em;fill:var(--fg)}
+.hseal .mf{display:none;color:var(--fg)}
+.slide.inv .hseal .mf,.slide.laranja .hseal .mf,.slide.azul .hseal .mf,html[data-mode="dark"] .hseal .mf{display:block}
+.slide.inv .hseal .mg,.slide.laranja .hseal .mg,.slide.azul .hseal .mg,html[data-mode="dark"] .hseal .mg{display:none}
+.ring{transform-box:view-box;transform-origin:center}
+.slide.visible .ring{animation:spin 12s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+/* ───────── CANVAS ───────── */
+.canvas{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;
+  justify-content:center;padding:5.2cqw 0 0;gap:2.4cqw}
+.slide.top .canvas{justify-content:flex-start}
+.slide.bare .canvas{padding:0}
+.slide.ctr .canvas{align-items:center;text-align:center}
+
+/* ───────── ESTILOS DE TEXTO · o nome é a instrução ─────────
+   Display Bold é a voz. Text é o texto. Display Light é o número. */
+.hero{font-family:var(--display);font-weight:700;font-size:var(--t-hero);line-height:.92;letter-spacing:-.03em}
+.stmt{font-family:var(--display);font-weight:700;font-size:var(--t-stmt);line-height:.96;letter-spacing:-.03em}
+.ttl{font-family:var(--display);font-weight:700;font-size:var(--t-ttl);line-height:1;letter-spacing:-.025em}
+.sub{font-size:var(--t-sub);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.body-l{font-size:var(--t-body-l);font-weight:400;line-height:1.3;letter-spacing:-.01em}
+.body{font-size:var(--t-body);font-weight:400;line-height:1.5}
+.body-s{font-size:var(--t-body-s);font-weight:400;line-height:1.55}
+.cap{font-size:var(--t-cap);font-weight:700;text-transform:uppercase;letter-spacing:.14em;line-height:1}
+.num{font-family:var(--display);font-size:var(--t-num);font-weight:300;line-height:.8;letter-spacing:-.05em}
+.numm{font-family:var(--display);font-size:var(--t-num-m);font-weight:300;line-height:.88;letter-spacing:-.03em}
+.med{font-weight:700}.mut{color:var(--muted)}
+.pg{font-family:var(--pangaia);font-weight:300}
+
+/* ───────── REVEAL ───────── */
+.rv{opacity:0;transform:translateY(1.4cqw);transition:opacity .18s linear,transform .18s linear}
+.slide.visible .rv{opacity:1;transform:translateY(0);
+  transition:opacity .5s var(--e-expo),transform .5s var(--e-expo);transition-delay:var(--d,0s)}
+.slide.visible .rv.slow{transition-duration:1.4s;transition-timing-function:var(--e-slow)}
+.gw{transform:scaleX(0);transform-origin:left;transition:transform .18s linear}
+.slide.visible .gw{transform:scaleX(1);transition:transform .55s var(--e-expo);transition-delay:var(--d,0s)}
+.gv{transform:scaleY(0);transform-origin:top;transition:transform .18s linear}
+.slide.visible .gv{transform:scaleY(1);transition:transform .55s var(--e-expo);transition-delay:var(--d,0s)}
+
+/* ───────── GRIFO · a mecânica da Africa, a tinta do Itaú ─────────
+   Bloco laranja varrendo a palavra, com a quina pequena do Itaú.
+   Sobre laranja o bloco é branco e a palavra, laranja. */
+.hl{position:relative;display:inline-block;white-space:nowrap}
+.hl::before{content:"";position:absolute;left:-.12em;right:-.12em;top:-.02em;bottom:-.04em;
+  background:var(--acc);border-radius:var(--r-s);transform:scaleX(0);transform-origin:left;transition:transform .18s linear}
+.hl::after{content:attr(data-w);position:absolute;left:0;top:0;color:var(--acc-fg);white-space:nowrap;
+  clip-path:inset(0 100% 0 0);transition:clip-path .18s linear}
+.slide.visible .hl::before{transform:scaleX(1);transition:transform .55s var(--e-expo);transition-delay:var(--d,.25s)}
+.slide.visible .hl::after{clip-path:inset(0 0 0 0);transition:clip-path .55s var(--e-expo);transition-delay:var(--d,.25s)}
+.ul{position:relative;display:inline-block}
+.ul::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:1px;background:var(--line);
+  transform:scaleX(0);transform-origin:left;transition:transform .18s linear}
+.slide.visible .ul::after{transform:scaleX(1);transition:transform .55s var(--e-expo);transition-delay:var(--d,.2s)}
+.ul.act::after{background:var(--laranja)}
+
+/* ───────── A PEDRA · a forma do cliente, solta ─────────
+   Superelipse de expoente 4.3, medida no vetor do logo. Contêiner, janela,
+   fantasma, marcador. Nunca leva o logotipo dentro: isso é o logo. */
+.pd{color:var(--laranja)}
+.pd-bleed{position:absolute;pointer-events:none;z-index:0;color:var(--laranja)}
+.pd-ghost{position:absolute;color:var(--laranja);opacity:.08;pointer-events:none;z-index:0}
+.slide.laranja .pd-ghost,.slide.inv .pd-ghost,.slide.azul .pd-ghost{color:#ffffff;opacity:.12}
+@keyframes afFloat{from{transform:translateY(0)}to{transform:translateY(-.7cqw)}}
+.slide.visible .float{animation:afFloat 3s var(--e-strong) infinite alternate}
+.win{clip-path:url(#pedra-clip);border:0;border-radius:0}
+
+/* ───────── O LOGO DO ITAÚ · asset, só sobre branco ───────── */
+.lg{color:var(--laranja)}
+
+/* ───────── O SELO DA AFRICA · grande, no fechamento ───────── */
+.seal{width:15cqw}
+.seal text{font-family:var(--af);font-weight:500;font-size:11.6px;letter-spacing:.19em;fill:var(--fg)}
+
+/* ───────── MARCADOR DE IMAGEM ─────────
+   Palco cinza do Itaú, a pedra em fantasma, a quina de 16px e o rótulo.
+   A imagem real entra em base64, teto de 400KB. */
+.img{position:relative;background:var(--stage);overflow:hidden;border:1px solid var(--hair);border-radius:var(--r)}
+.img .gh{position:absolute;left:-18%;top:-26%;width:80%;color:var(--laranja);opacity:.1}
+.img .lb{position:absolute;left:1.2cqw;bottom:1cqw;font-size:.85cqw;font-weight:700;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+
+/* ───────── SEÇÃO EDITÁVEL · laranja, marcada pela pedra branca ───────── */
+.sec .canvas{justify-content:flex-start;padding-top:0}
+.sec .pedra-sq{width:2cqw;height:2cqw;color:#ffffff;margin-bottom:2.4cqw}
+.sec .stmt{font-size:9cqw}
+.sec .hint{margin-top:auto;font-size:var(--t-body-s);font-weight:700;color:var(--fg);max-width:52ch;line-height:1.5}
+
+/* ───────── LAYOUTS ───────── */
+.two{display:flex;gap:var(--field);flex:1;align-items:center}
+.two > *{min-width:0}
+.two .tx{display:flex;flex-direction:column;gap:1.6cqw}
+.split{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+.split > .img{border:0;border-radius:0;border-right:1px solid var(--hair)}
+.split .tx{padding:var(--m);display:flex;flex-direction:column;justify-content:center;gap:1.6cqw}
+.half-r{position:absolute;right:0;top:0;bottom:0;width:40.5%;border:0;border-radius:0;border-left:1px solid var(--hair)}
+
+.blocks2{display:grid;grid-template-columns:1fr 1fr;gap:3.2cqw var(--field)}
+.blocks2 .b{display:flex;flex-direction:column;gap:.8cqw}
+
+.hairlist{display:flex;flex-direction:column;gap:2cqw}
+.hairlist li{list-style:none;border-left:1px solid var(--line);padding-left:1.6cqw;line-height:1.4}
+.hairlist li b{display:block;font-weight:700}
+
+.g3{position:absolute;inset:var(--m);top:11cqw;display:grid;grid-template-columns:1fr 1.5fr 2.2fr;gap:var(--gutter)}
+.g3 .col{display:flex;flex-direction:column;gap:var(--gutter)}
+.g4{position:absolute;inset:var(--m);top:11cqw;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:var(--gutter)}
+
+/* ───────── DADOS · editorial, não dashboard · a regra da Africa, a cor do Itaú ───────── */
+.vn{display:block;overflow:visible;color:var(--fg)}
+.vn .c{transform-box:fill-box;transform-origin:center;transform:scale(.6);opacity:0;transition:transform .18s linear,opacity .18s linear}
+.slide.visible .vn .c{transform:scale(1);opacity:1;transition:transform .8s var(--e-expo),opacity .5s;transition-delay:var(--d,0s)}
+.vn .lens,.vn text{opacity:0;transition:opacity .18s linear}
+.slide.visible .vn .lens,.slide.visible .vn text{opacity:1;transition:opacity .6s var(--e-expo);transition-delay:var(--d,.5s)}
+.vn text{font-family:var(--text);font-weight:400;font-size:4.2px;fill:var(--fg)}
+.vn text.lb{font-weight:700;font-size:1.9px;letter-spacing:.14em;text-transform:uppercase}
+.prop{flex:1;display:flex;align-items:flex-end;gap:var(--gutter);min-height:0}
+.pc{border-radius:50%;flex:0 0 auto;display:grid;place-items:center;font-family:var(--display);font-weight:300;letter-spacing:-.03em;line-height:1;
+  transform:scale(.6);opacity:0;transition:transform .18s linear,opacity .18s linear}
+.slide.visible .pc{transform:scale(1);opacity:1;transition:transform .9s var(--e-expo),opacity .5s;transition-delay:var(--d,0s)}
+.pc.big{width:28cqw;height:28cqw;background:var(--laranja);color:#ffffff;font-size:9cqw}
+.pc.small{width:18.3cqw;height:18.3cqw;background:var(--fg);color:var(--bg);font-size:6cqw}
+.panels{position:absolute;inset:0;top:38%;display:grid;grid-template-rows:1fr 1fr}
+.panels .row{display:grid;grid-template-columns:var(--w) 1fr;align-items:center}
+.panels .row .tex{background:var(--laranja);height:100%;position:relative;overflow:hidden}
+.panels .row .tex .gh{position:absolute;left:-10%;top:-30%;width:60%;color:#ffffff;opacity:.16}
+.panels .row .n{padding-left:2.4cqw;font-family:var(--display);font-weight:300;font-size:var(--t-num-m);letter-spacing:-.03em}
+.panels .row:last-child{background:var(--stage)}
+.panels .row:last-child .tex{background:var(--fg)}
+.panels .row:last-child .tex .gh{color:var(--bg)}
+.heron{display:flex;gap:var(--gutter);align-items:flex-end;width:89.6cqw}
+.heron .tx{display:flex;flex-direction:column;gap:1.2cqw;padding-bottom:1.2cqw}
+.bars{display:flex;flex-direction:column;gap:2.4cqw;width:89.6cqw}
+.bars .b{display:grid;grid-template-columns:21.2cqw 1fr 8cqw;gap:var(--gutter);align-items:center}
+.bars .lb{font-size:var(--t-body);font-weight:400}
+.bars .tr{height:3.6cqw;border-bottom:1px solid var(--hair);position:relative}
+.bars .fi{position:absolute;left:0;top:0;bottom:0;background:var(--fg)}
+.bars .b:first-child .fi{background:var(--laranja)}
+.bars .fi{transform:scaleX(0);transform-origin:left;transition:transform .18s linear}
+.slide.visible .bars .fi{transform:scaleX(1);transition:transform .7s var(--e-expo);transition-delay:var(--d,0s)}
+.bars .vl{font-family:var(--display);font-size:var(--t-sub);font-weight:300;text-align:right;letter-spacing:-.02em}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gutter);width:89.6cqw}
+.kpis div{border-top:1px solid var(--line);padding-top:1.6cqw}
+.kpis .n{font-family:var(--display);font-size:var(--t-num-m);font-weight:300;line-height:.88;letter-spacing:-.03em}
+.kpis .u{font-size:var(--t-cap);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:1.2cqw;line-height:1.4}
+
+/* ───────── A REGRA · o que é de quem ───────── */
+.rule2{display:grid;grid-template-columns:1fr 1fr;gap:var(--field);width:89.6cqw;align-items:start}
+.rule2 .col{display:flex;flex-direction:column;gap:1.6cqw}
+.rule2 .col .cap{padding-bottom:1.2cqw;border-bottom:1px solid var(--line)}
+.rule2 .hairlist{gap:1.2cqw}
+.rule2 .hairlist li{font-size:var(--t-body);line-height:1.35}
+.rule2 .col.it .hairlist li{border-left-color:var(--laranja)}
+
+/* ───────── TIPOGRAFIA · quando e como usar cada fonte ───────── */
+.fonts{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--field);width:89.6cqw}
+.fonts .f{display:flex;flex-direction:column;gap:.8cqw;min-width:0}
+.fonts .aa{font-family:var(--display);font-size:12cqw;line-height:.9;letter-spacing:-.04em;font-weight:700;margin:.8cqw 0 .4cqw}
+.fonts .aa.tx{font-family:var(--text);font-weight:400;letter-spacing:-.02em}
+.fonts .aa.cp{font-family:var(--text);font-weight:700;letter-spacing:.02em}
+.fonts .nm{font-size:var(--t-sub);font-weight:400;letter-spacing:-.01em;padding-bottom:1.2cqw;border-bottom:1px solid var(--line);margin-bottom:.8cqw}
+.fonts .body-s b{font-weight:700}
+
+/* ───────── ESPECIMEN ───────── */
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:var(--field);align-items:start;flex:1}
+.spec .l{display:flex;flex-direction:column;gap:2.4cqw}
+.spec .r{display:flex;flex-direction:column;gap:2cqw}
+.spec .r p b{font-weight:700}
+
+/* ───────── BIBLIOTECA · marca, pedra e paleta ───────── */
+.marks{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gutter);flex:1;align-items:center}
+.marks .cell{display:flex;flex-direction:column;align-items:center;gap:1.6cqw}
+.marks .bx{width:100%;aspect-ratio:1/1;display:grid;place-items:center;border:1px solid var(--hair);border-radius:var(--r);padding:18%;position:relative;overflow:hidden}
+.marks .bx svg{width:100%}
+.marks .bx.blk{background:var(--preto);color:var(--branco);border-color:var(--preto)}
+.marks .bx.lar{background:var(--laranja);color:var(--branco);border-color:var(--laranja)}
+.marks .nm{font-size:.85cqw;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);text-align:center}
+.pal{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--gutter);width:89.6cqw}
+.pal .sw{display:flex;flex-direction:column;gap:1cqw}
+.pal .chip{height:12cqw;border-radius:var(--r);border:1px solid var(--hair)}
+.pal b{display:block;font-size:var(--t-sub);font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.pal span{font-size:var(--t-cap);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.gband{height:2.4cqw;width:89.6cqw;background:var(--grad);border-radius:var(--r-s)}
+
+/* overlay da grade · tecla G */
+.gridlay{position:absolute;inset:0;pointer-events:none;z-index:5;display:none}
+html[data-grid="1"] .gridlay{display:block}
+.gridlay .mg{position:absolute;inset:var(--m);border:1px dashed rgba(255,98,0,.6)}
+.gridlay .cols{position:absolute;left:var(--m);right:var(--m);top:var(--m);bottom:var(--m);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)}
+.gridlay .cols i{background:rgba(255,98,0,.1)}
+
+/* ───────── UI FIXA · lê --ui-*, que o JS troca pelo fundo do slide corrente ───────── */
+.prog{position:fixed;left:0;top:0;height:2px;background:var(--laranja);width:0;z-index:60;transition:width .25s var(--e-expo)}
+.dots{position:fixed;right:1.4vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.34vh;z-index:60;max-height:76vh;flex-wrap:wrap;align-content:flex-end}
+.dots button{width:1.5vw;max-width:22px;height:1px;background:var(--ui-fg);opacity:.28;transition:all .2s ease;border-radius:0}
+.dots button:hover{opacity:.7}
+.dots button.on{background:var(--laranja);opacity:1;transform:scaleX(1.5)}
+.count{position:fixed;right:1.6vw;bottom:1.6vh;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ui-mut);z-index:60;transition:color .3s}
+.count b{color:var(--ui-fg);font-weight:700;transition:color .3s}
+.wm{position:fixed;left:1.6vw;bottom:1.6vh;font-family:var(--af);font-size:11px;font-weight:500;line-height:1;letter-spacing:-.01em;z-index:60;color:var(--ui-fg);white-space:nowrap;transition:color .3s}
+.wm b{font-family:var(--display);font-weight:700;letter-spacing:-.02em}
+.wm span{color:var(--ui-mut);transition:color .3s}
+.nav{position:fixed;left:50%;bottom:1.6vh;transform:translateX(-50%);display:flex;gap:.6vw;z-index:60}
+.nav button{width:30px;height:30px;border:1px solid var(--ui-fg);color:var(--ui-fg);border-radius:50%;display:grid;place-items:center;transition:all .2s ease}
+.nav button:hover:not(:disabled){border-color:var(--laranja);color:var(--laranja)}
+.nav button:disabled{opacity:.22;cursor:default}
+.nav svg{width:9px;height:9px;stroke:currentColor;stroke-width:1.6;fill:none}
+.tools{position:fixed;right:1.6vw;top:1.6vh;display:flex;gap:.5vw;z-index:60}
+.tools button{width:26px;height:26px;border:1px solid var(--ui-fg);color:var(--ui-fg);border-radius:50%;display:grid;place-items:center;font-size:9px;font-weight:700;transition:all .2s ease}
+.tools button:hover,.tools button.on{background:var(--ui-fg);color:var(--ui-bg)}
+.notes{position:fixed;left:0;right:0;bottom:0;background:var(--preto);color:var(--branco);padding:16px 5vw 20px;font-size:13px;line-height:1.55;z-index:70;transform:translateY(101%);transition:transform .5s var(--e-strong);max-height:34vh;overflow:auto}
+.notes.on{transform:translateY(0)}
+.notes .nk{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza-m);margin-bottom:7px;display:block}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+{{CAMADA_CSS}}
+
+/* ───────── IMPRESSÃO ───────── */
+@page{size:1920px 1080px;margin:0}
+@media print{
+  html{scroll-snap-type:none}
+  .slide{height:1080px;width:1920px;break-after:page;page-break-after:always}
+  .slide:last-of-type{break-after:auto;page-break-after:auto}
+  .frame{width:1920px;height:1080px;aspect-ratio:auto}
+  .prog,.dots,.count,.nav,.tools,.notes,.wm,.gridlay{display:none!important}
+  .rv,.gw,.gv{opacity:1!important;transform:none!important}
+  .hl::before{transform:scaleX(1)!important}
+  .hl::after{clip-path:inset(0 0 0 0)!important}
+  .ul::after{transform:scaleX(1)!important}
+  .vn .c,.pc{transform:none!important;opacity:1!important}
+  .vn .lens,.vn text{opacity:1!important}
+  .bars .fi{transform:scaleX(1)!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <linearGradient id="ag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#348FFE"/>
+      <stop offset=".27" stop-color="#8C6BE1"/>
+      <stop offset=".68" stop-color="#FF3CB9"/>
+      <stop offset="1" stop-color="#FF7842"/>
+    </linearGradient>
+    <symbol id="mark" viewBox="0 0 74.76 81.9">
+      <path fill="currentColor" d="M66.05,62.35l-15.01,19.56h-11.48l-10.34-39.32H9.86L0,19.69,21.3,0l17.69,6.93,13.78.8,11.69,18.77,10.2,4.71-9.51,19.13.89,12ZM71.21,65.49l-6.58,8.53,6.93,3.02,3.2-8.62-3.55-2.93Z"/>
+    </symbol>
+    <symbol id="mark-g" viewBox="0 0 74.76 81.9">
+      <path fill="url(#ag)" d="M66.05,62.35l-15.01,19.56h-11.48l-10.34-39.32H9.86L0,19.69,21.3,0l17.69,6.93,13.78.8,11.69,18.77,10.2,4.71-9.51,19.13.89,12ZM71.21,65.49l-6.58,8.53,6.93,3.02,3.2-8.62-3.55-2.93Z"/>
+    </symbol>
+    <symbol id="pedra" viewBox="0 0 100 100"><path fill="currentColor" d="{{PEDRA_100}}"/></symbol>
+    <clipPath id="pedra-clip" clipPathUnits="objectBoundingBox"><path d="{{PEDRA_UNIT}}"/></clipPath>
+    {{ITAU_SYMBOL}}
+    <path id="ring-path" d="M100,100 m-79,0 a79,79 0 1,1 158,0 a79,79 0 1,1 -158,0"/>
+    <path id="ring-hd" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
+  </defs>
+</svg>

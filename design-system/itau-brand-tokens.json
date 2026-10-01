@@ -1,0 +1,474 @@
+{
+  "system": {
+    "name": "itau-x-africa",
+    "displayName": "Itaú × Africa Creative/™",
+    "idea": "Superfície Itaú, assinatura Africa. O que se vê é do cliente: branco, laranja, a pedra, a Itau Display em caixa baixa, as quinas de 16px. O que se sente é da agência: a grade de 12 colunas, o filete de 1px, a legenda miúda contra o título gigante, o dado editorial em Light, o selo no canto e o fecho em Pangaia.",
+    "purpose": "Template de slides e design system para as apresentações da Africa ao Itaú (campanhas e estratégia, plateia CMO). Apresentado pelo VP da Africa. Não é o brand book do Itaú: é o sistema híbrido da relação agência-cliente.",
+    "version": "1.1",
+    "date": "2026-09-18",
+    "derivedFrom": "africa-brand-tokens.json v1.2 (Clientes/Africa/Design System) + tokens oficiais do site do Itaú (tokens_idl/varejo.css, itau.com.br, snapshot Wayback 2025) + vetor do logo 2023 (Wikimedia Commons, PD-textlogo).",
+    "changelog": "v1.0 (15/09/2026): nasce o sistema. Paleta e tipografia do Itaú lidas dos tokens oficiais do site; a pedra medida no vetor do logo; grade, escala, movimento e cadência herdadas do Master Slides da Africa v4.3. v1.1 (18/09/2026): entram os padrões animados de 17/09 (grupo patterns: as primitivas do movimento, o Título curto, o acento de texto, a Moldura, a anatomia da capa, as órbitas, o poema em máquina de escrever, o ecossistema e as tabelas), a superfície azul marinho, a régua 12/17 do corpo, a curva vivid em uso, a lista fechada de loops e as exceções declaradas (o logo sobre preto na anatomia da capa e no núcleo do ecossistema; sombra difusa só no faEcoGlow; grifo duplo só nas órbitas). Tudo criação da Africa, nascida no deck Itaú fim de ano V2."
+  },
+
+  "client": {
+    "name": "Itaú",
+    "legalName": "Itaú Unibanco",
+    "logotype": "itaú, em caixa baixa, dentro da pedra laranja",
+    "meaning": "Itaú, em tupi-guarani, é pedra preta. O símbolo representa a pedra.",
+    "meaningSource": "gkpb.com.br/160737/novo-logo-itau · designconceitual.com.br 07/12/2023",
+    "identity2023": {
+      "launch": "06/12/2023",
+      "concept": "Feito de Futuro",
+      "previousTagline": "Feito com você",
+      "process": "22 meses, mais de 70 estudos de cor, cerca de 100 estudos tipográficos",
+      "team": "Pentagram (Michael Bierut) na consultoria estratégica; Fabio Haag Type (Fabio Haag, Henrique Beier, Ana Laydner, Eduilson Coan) no refinamento do logotipo; time interno de design do Itaú; Africa Creative e Galeria no posicionamento",
+      "people": [
+        { "name": "Eduardo Tracanella", "role": "CMO do Itaú Unibanco", "source": "braziljournal.com · designconceitual.com.br" },
+        { "name": "Clayton Caetano", "role": "Superintendente de Design", "source": "janela.com.br 07/12/2023" }
+      ],
+      "symbol": "A pedra ganha forma mais orgânica e fluida. O logotipo abandona a caixa alta: caixa baixa como gesto de humanização. O acento do ú passa de vertical a horizontal e ascendente.",
+      "symbolSource": "fabiohaagtype.com/en/itau · gkpb.com.br",
+      "colorNote": "O laranja ganha protagonismo. Azuis vibrantes identificam Uniclass e Personnalité; tons escuros, Itaú BBA e Private.",
+      "colorNoteSource": "gkpb.com.br/160737/novo-logo-itau",
+      "sources": [
+        "https://gkpb.com.br/160737/novo-logo-itau/",
+        "https://janela.com.br/2023/12/07/com-nova-marca-itau-lanca-campanha-com-o-conceito-feito-de-futuro/",
+        "https://fabiohaagtype.com/en/itau/",
+        "https://designconceitual.com.br/2023/12/07/itau-atualiza-marca-e-adota-slogan-feito-de-futuro/",
+        "https://braziljournal.com/play/por-que-o-itau-decidiu-mudar-a-marca-e-assumir-o-laranja/"
+      ]
+    },
+    "relationship": {
+      "agencyClientSince": 2002,
+      "since_source": "africacreative.com.br, lista de clientes (africa-brand-tokens.json v1.2, clients[0])",
+      "worksOnAfricaSite": ["100 anos do Itaú", "Itaú Tá Feito"],
+      "works_source": "africacreative.com.br, lista de trabalhos (africa-brand-tokens.json v1.2, works)"
+    }
+  },
+
+  "agency": {
+    "name": "Africa Creative/™",
+    "namingRule": "\"Africa\" SEM acento, sempre. Regra herdada dos tokens da Africa.",
+    "wordmark": "@africa creative/™",
+    "signatureInThisSystem": [
+      "O selo giratório no canto superior esquerdo de todo slide de conteúdo (o mark com o gradiente dentro do anel AFRICA CREATIVE/™ em Miletus Grotesk Medium).",
+      "A marca d'água do pé: itaú × @africa creative/™.",
+      "A grade de 12 colunas, a margem de 5.2cqw, a unidade de respiro de 0.8cqw e o filete de 1px.",
+      "A legenda miúda em caixa alta contra o título gigante.",
+      "O dado editorial: número em Light, filete, proporção estrita, uma cor só por diagrama.",
+      "O fechamento obrigatório com a frase final do manifesto e o slogan em PP Pangaia."
+    ],
+    "whatStaysOut": [
+      "O coral #ff636b: o acento deste sistema é o laranja do cliente.",
+      "O bone #efefeb: a base é o branco do Itaú.",
+      "As peças de Volume: o vocabulário 3D da Africa é de plano cortado; o do Itaú é orgânico. No lugar delas, a composição de pedras.",
+      "A Pangaia como voz: aqui ela fala uma vez só, no fecho."
+    ]
+  },
+
+  "colors": {
+    "laranja": {
+      "hex": "#FF6200",
+      "role": "Primária · a cor do cliente",
+      "usage": "Massa de capa e de seção, bloco do grifo, pedra, região de destaque num diagrama, barra de progresso da UI.",
+      "source": "tokens_idl/varejo.css do itau.com.br (--ids_color_bg_brand_primary, --ids_color_action_primary_base, --ids_color_text_highlight, --ids_color_chart_01), snapshot Wayback 2025. Confirmado pelo vetor e pelo PNG do logo 2023 no Wikimedia Commons (32.860 pixels amostrados em #FF6200)."
+    },
+    "laranjaEscuro": {
+      "hex": "#E55800",
+      "role": "Primária · variante",
+      "usage": "Estado pressionado e hover no site. No deck, só em interface: hover de botão da UI fixa.",
+      "source": "--ids_color_action_primary_variant"
+    },
+    "azul": {
+      "hex": "#000066",
+      "role": "Secundária",
+      "usage": "Fundo de capa quando o assunto é Uniclass ou Personnalité. Segunda cor de gráfico. Nunca ao lado do laranja em massa.",
+      "source": "--ids_color_bg_brand_secondary, --ids_color_action_secondary_base, --ids_color_text_link_base"
+    },
+    "azulEscuro": { "hex": "#000D3C", "role": "Secundária · variante", "usage": "No site, a variante do azul secundário (o nome do token; o uso exato não está no dossiê). No deck, desde 17/09/2026, a superfície azul marinho (surfaces.azulMarinho): o escuro do sistema quando o preto pesa demais.", "source": "--ids_color_action_secondary_variant" },
+    "branco": { "hex": "#FFFFFF", "role": "Base", "usage": "Fundo padrão do sistema. O Itaú é light-first, como a Africa.", "source": "--ids_color_bg_base" },
+    "preto": { "hex": "#000000", "role": "Tinta e pedra preta", "usage": "Tipografia, filete de 1px, o fundo da capa preta e do modo escuro. Itaú é pedra preta.", "source": "--ids_color_text_body_01, --ids_color_text_heading_01, --ids_color_contrast_onLight" },
+    "cinzaTexto": { "hex": "#4C4C4C", "role": "Neutro", "usage": "Texto de apoio, legenda, fonte do dado.", "source": "--ids_color_text_body_02, --ids_color_text_heading_02" },
+    "cinzaBorda": { "hex": "#5D636F", "role": "Neutro", "usage": "Borda forte.", "source": "--ids_color_border_strong" },
+    "cinzaMedio": { "hex": "#ADB8B3", "role": "Neutro", "usage": "Borda média, texto de apoio sobre preto.", "source": "--ids_color_border_medium" },
+    "cinzaSuave": { "hex": "#CFD1D3", "role": "Neutro", "usage": "Borda suave, estado desabilitado.", "source": "--ids_color_border_soft, --ids_color_action_disabled_base" },
+    "superficie1": { "hex": "#F1F2F4", "role": "Superfície", "usage": "Palco do marcador de imagem, painel de apoio.", "source": "--ids_color_bg_variant_01" },
+    "superficie2": { "hex": "#E3E5E8", "role": "Superfície", "usage": "Segunda superfície, a bola cinza de um diagrama, a terceira pedra.", "source": "--ids_color_bg_variant_02" },
+    "chart": {
+      "note": "Paleta de gráfico do site, na ordem oficial. No deck vale a regra da Africa: uma cor por diagrama, o laranja numa região só. As demais entram apenas quando um gráfico real exige série.",
+      "order": ["#FF6200", "#002766", "#6E6E6E", "#0131FF", "#FFBA00", "#999999", "#BD0071", "#008717"],
+      "source": "--ids_color_chart_01 a 08"
+    },
+    "feedback": {
+      "note": "Registrado, não usado em slide.",
+      "alert": "#FFCC00", "error": "#CC0000", "information": "#001FBD", "success": "#0B5B38", "neutral": "#4C4C4C",
+      "source": "--ids_color_feedback_*"
+    },
+    "legacyDigitalOrange": {
+      "hex": "#EC7000",
+      "note": "Laranja digital anterior, citado como token do Voxel (design system do Itaú) por designmd.app/brands/itau, fonte de terceiros. Os tokens oficiais do site em 2025 dizem #FF6200. Não usar; fica registrado para não confundir.",
+      "source": "https://designmd.app/brands/itau"
+    },
+    "africaGradient": {
+      "css": "linear-gradient(90deg, #348FFE 0%, #8C6BE1 27%, #FF3CB9 68%, #FF7842 100%)",
+      "rule": "Só dentro da silhueta do mark da Africa: no centro do selo do cabeçalho sobre fundo branco e no selo do fechamento. Sobre laranja, preto e azul o mark do selo vai chapado em branco. Nunca solto, nunca em texto, nunca em barra.",
+      "source": "africa-brand-tokens.json v1.2, gradient"
+    },
+    "rule": "Branco é a base. Laranja é a cor, e pode ser massa: capa, seção, bloco do grifo, pedra, uma região de diagrama. Preto é tinta e pedra. O azul só entra pelo segmento. Cinzas do Itaú fazem apoio. Nada de coral, nada de bone."
+  },
+
+  "surfaces": {
+    "branca": { "bg": "#FFFFFF", "fg": "#000000", "role": "O padrão. Todo slide de conteúdo." },
+    "laranja": { "bg": "#FF6200", "fg": "#FFFFFF", "role": "Seção editável, capa 03, no máximo um momento de ênfase. Nunca dois adjacentes. O grifo inverte: bloco branco, palavra laranja.", "contrastSource": "--ids_color_contrast_onBrand_primary: #FFFFFF" },
+    "preta": { "bg": "#000000", "fg": "#FFFFFF", "role": "Capa 04 (a pedra preta) e o modo escuro da tecla B." },
+    "azul": { "bg": "#000066", "fg": "#FFFFFF", "role": "Capa 05, só para Uniclass e Personnalité.", "contrastSource": "--ids_color_contrast_onBrand_secondary: #FFFFFF" },
+    "azulMarinho": { "bg": "#000D3C", "fg": "#FFFFFF", "role": "A superfície escura do sistema quando o preto pesa demais: a frase e o dado (Statement 07, o Main KPI). Na narrativa, surface azul com tom escuro. Herda tudo de azul: texto branco, legenda, Moldura em branco. O azul #000066 continua reservado a Uniclass e Personnalité.", "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2 (o slide O inesperado e o Main KPI): colors.azulEscuro usado como superfície, .slide.azul.marinho{background:var(--azul-d)}." },
+    "budget": "Num deck de verdade, superfícies coloridas somam 15 a 20% dos slides."
+  },
+
+  "typography": {
+    "voice": {
+      "family": "Itau Display",
+      "weight": 700,
+      "fallback": "Figtree 700 (embutida)",
+      "role": "A voz: capa, statement e título de slide. Sempre Bold, caixa baixa, entrelinha fechada, tracking negativo.",
+      "source": "Todos os textStyle_f01 do site usam 700 1rem a 4rem \"Itau Display\" (tokens_idl/varejo.css). A família tem seis pesos para impressão e apresentação (Behance, Itaú Typeface, Dalton Maag)."
+    },
+    "text": {
+      "family": "Itau Text",
+      "weights": [400, 700],
+      "fallback": "Figtree 400/700 (embutida)",
+      "role": "O texto: parágrafo, lista, nota, subtítulo (Bold), legenda (Bold, caixa alta).",
+      "source": "textStyle_body_01/02, caption e link em 400/700/900 \"Itau Text\" (tokens_idl/varejo.css)."
+    },
+    "number": {
+      "family": "Itau Display",
+      "weight": 300,
+      "fallback": "Figtree 300 (embutida)",
+      "role": "Número-herói e número médio de dado. É a assinatura da Africa dentro do dado: Light gigante, tracking fechado.",
+      "note": "Itau Display Light existe na família (seis pesos). Se a máquina só tiver o Bold instalado, o navegador renderiza Bold; o fallback embutido tem 300."
+    },
+    "agencySeal": {
+      "family": "Miletus Grotesk",
+      "weight": 500,
+      "role": "Só o anel do selo e a marca d'água do pé. Fonte da Africa, embutida.",
+      "source": "africa-brand-tokens.json v1.2, seal + typography.institutional"
+    },
+    "agencyClosing": {
+      "family": "PP Pangaia",
+      "weight": 300,
+      "role": "Só o fechamento e o slogan. A Africa fala uma vez, no fim.",
+      "source": "africa-brand-tokens.json v1.2, typography.display"
+    },
+    "fallbackDecision": {
+      "family": "Figtree (Google Fonts, licença OFL, fonte variável 300 a 700, subsets latin e latin-ext)",
+      "why": "Itau Display e Itau Text são proprietárias e não estão nesta máquina nem no workspace. O sistema declara as famílias do Itaú em primeiro lugar no font stack: onde estiverem instaladas, o deck renderiza com elas. O fallback precisava ser uma sans humanista, aberta e de caixa baixa amigável, com Light e Bold, e livre para embutir. É uma escolha da Africa, não um fato do Itaú.",
+      "status": "DECISÃO PENDENTE DE OK DO BRUNO. Se a Africa tiver os arquivos da Itau Display e da Itau Text, trocar o fallback pelas fontes reais (uso interno) e registrar a licença."
+    },
+    "scale": {
+      "unit": "1cqw = 19.2px num quadro de 1920",
+      "hero": { "cqw": 9.4, "px": 180, "font": "Display 700", "lineHeight": 0.92, "tracking": "-.03em", "use": "A capa." },
+      "statement": { "cqw": 8, "px": 154, "font": "Display 700", "lineHeight": 0.96, "tracking": "-.03em", "use": "Uma frase por tela, duas ou três linhas." },
+      "title": { "cqw": 5.6, "px": 108, "font": "Display 700", "lineHeight": 1, "tracking": "-.025em", "use": "Título de slide de conteúdo." },
+      "titleShort": { "cqw": 4.6, "px": 88, "font": "Display 700", "lineHeight": 1.06, "tracking": "-.025em", "use": "O degrau entre o Título e o Subtítulo: a frase da Moldura quando a linha mais larga passa de 17 caracteres (.ttl-s, 17/09/2026)." },
+      "numberHero": { "cqw": 15, "px": 288, "font": "Display 300", "lineHeight": 0.8, "tracking": "-.05em", "use": "Um por slide, dois por deck." },
+      "numberMid": { "cqw": 7, "px": 134, "font": "Display 300", "lineHeight": 0.88, "tracking": "-.03em", "use": "Círculos, painéis, contagens." },
+      "subtitle": { "cqw": 2.6, "px": 50, "font": "Text 700", "lineHeight": 1.1, "tracking": "-.01em", "use": "Cabeça de bloco, nome de coluna." },
+      "bodyLarge": { "cqw": 2.3, "px": 44, "font": "Text 400", "lineHeight": 1.3, "tracking": "-.01em", "use": "O parágrafo que acompanha o título." },
+      "body": { "cqw": 1.75, "px": 34, "font": "Text 400", "lineHeight": 1.5, "tracking": "0", "use": "Texto corrido." },
+      "bodySmall": { "cqw": 1.35, "px": 26, "font": "Text 400", "lineHeight": 1.55, "tracking": "0", "use": "Apoio, nota de gráfico, crédito." },
+      "caption": { "cqw": 1, "px": 19, "font": "Text 700 caixa alta", "lineHeight": 1, "tracking": ".14em", "use": "Fonte do dado, rótulo, data, índice." },
+      "rule": "A régua pela linha mais larga da frase (17/09/2026): até 12 caracteres, Statement (8cqw); até 17, Título (5.6); acima, Título curto (4.6). Até três linhas (quatro num statement sem apoio). Um acento por slide. A narrativa pode declarar o corpo em cqw: o Main KPI usa 4.8, entrelinha 1.16, caixa de 92cqw."
+    },
+    "contrastRule": "A hierarquia é o Bold gigante em caixa baixa contra uma legenda miúda em caixa alta. O peso intermediário não faz hierarquia: Display é 700, Text é 400, e o Light só aparece no número.",
+    "siteScale": {
+      "note": "Registro da escala do site, para referência. Display: 16/24, 20/28, 24/32, 32/48, 40/64, 48/80, 64/100 (px, corpo/entrelinha), todos 700. Text: body 16/24 e 14/20 em 400 e 700; caption 12/18.",
+      "source": "tokens_idl/varejo.css, --ids_textStyle_*"
+    }
+  },
+
+  "pedra": {
+    "name": "pedra",
+    "what": "A silhueta do símbolo do Itaú, usada como forma solta: contêiner, janela de imagem, fantasma de fundo, marcador de seção. Nunca substitui o logo e nunca recebe o logotipo dentro.",
+    "geometry": "Superelipse |x|^n + |y|^n = 1 com n = 4.3, proporção 1:1.",
+    "measurement": "Expoente ajustado por mínimos quadrados ao perfil da borda esquerda do PNG do logo 2023 (1233px, Wikimedia Commons). Erro quadrático médio de 14px em 1233 (1,2%). Fração de borda reta: 26%.",
+    "svg": "assets/itau-pedra.svg · no template: symbol #pedra (viewBox 0 0 100 100) e clipPath #pedra-clip (objectBoundingBox)",
+    "fills": ["laranja #FF6200 (o padrão)", "preto #000000 (a pedra preta)", "superfície #E3E5E8 (a terceira pedra da composição)", "branco sobre laranja (o marcador de seção)"],
+    "uses": [
+      { "name": "marcador de seção", "spec": "2cqw, branco sobre laranja. É o lápis da GUT e o quadrado coral da Africa, traduzidos." },
+      { "name": "sangria de capa", "spec": "Pedra laranja de 70 a 80% da altura sangrando por um lado. Como o mark da Africa na Capa 01." },
+      { "name": "janela", "spec": "Imagem recortada pela pedra (clip-path). A única máscara de imagem do sistema." },
+      { "name": "fantasma", "spec": "Laranja a 8% de opacidade nos cantos de um statement. Branco a 12% sobre laranja." },
+      { "name": "composição", "spec": "Três pedras (laranja, preta, cinza) flutuando na metade esquerda do Título 03. Só translação em Y, como o float da Africa." },
+      { "name": "moldura", "spec": "Seis contornos da pedra atrás da frase (meias larguras 29 a 42 na caixa 0..100, caixa de 120cqw centrada), tom sobre tom, respirando. Statement 05 a 07. Ver patterns.moldura." },
+      { "name": "anatomia", "spec": "A pedra nasce do quadrado de quinas redondas (morph de n=9 a n=4,3) com quatro contornos concêntricos em onda; por último o logo em laranja sobre uma pedra branca 4% menor. Capa 07. Ver patterns.anatomiaCapa." },
+      { "name": "coração", "spec": "A pedra com um texto dentro (ID), meia largura 5.3 no viewBox 64×46, bate duas vezes e deposita duas faixas. Título 04. Ver patterns.orbitas." }
+    ],
+    "motion": "afFloat: translateY de 0 a -.7cqw, 3s in out forte, alternate. A pedra nunca gira. Desde 17/09/2026 ela também pulsa (faPulse no marcador, faHeart no coração, faAnaPulse a 3% na anatomia) e respira em contornos (faResBreath na Moldura, faAnaRes na anatomia).",
+    "derivation": "DERIVAÇÃO declarada. O Itaú não publica a pedra como forma solta; o design system Voxel (fonte de terceiros) descreve uma superelipse proprietária para ícones e contêineres. Aqui a forma foi medida no logo e existe só como contêiner.",
+    "prohibitions": [
+      "Colocar o logotipo dentro da pedra solta (isso é o logo, e o logo é asset). Exceção declarada em 17/09/2026: a anatomia da capa (Capa 07) e o núcleo do ecossistema (Sistema 01 a 03) montam o logo em laranja sobre uma pedra branca 4% menor; token pendente de confirmação com o brand center.",
+      "Girar. A pedra sólida nunca gira; o que gira são os pontos nas órbitas do ecossistema e o nome que desliza 6 graus na curva.",
+      "Distorcer a proporção",
+      "Gradiente",
+      "Sombra ou volume. Vale para a pedra sólida; a Moldura usa desfoque leve nos contornos (veludo), não sombra.",
+      "Repetir em grade como padrão. Os contornos concêntricos da Moldura, da anatomia e das órbitas são ressonância de uma pedra só, não grade.",
+      "Preencher de coral ou com o gradiente da Africa"
+    ]
+  },
+
+  "logo": {
+    "asset": "assets/itau-logo-2023-commons.svg",
+    "provenance": "Vetor do logo 2023 publicado no Wikimedia Commons (File:Itaú Unibanco logo 2023.svg, PD-textlogo, marca registrada). Dois paths em #FF6200: a pedra com as letras vazadas e o miolo do a. Sobre fundo branco reproduz o logo oficial; sobre laranja ou preto não há versão neste sistema.",
+    "rule": "Só sobre branco e superfícies claras. Sobre laranja, preto e azul o nome vai em legenda até o asset oficial do brand center do Itaú entrar no lugar. Exceção declarada (17/09/2026): na anatomia da capa (Capa 07) e no núcleo do ecossistema (Sistema 01 a 03) o logo em laranja vai sobre uma pedra branca 4% menor, sobre preto; token pendente de confirmação com o brand center. Nunca redesenhar, recolorir ou redesenhar as letras.",
+    "verify": "Antes da primeira apresentação, trocar pelo asset oficial fornecido pelo Itaú e apagar a cópia do Commons.",
+    "cobrand": "itaú × @africa creative/™. No slide de marca: o logo do Itaú, o × em Itau Display, o selo da Africa. Na marca d'água do pé: a mesma linha, em texto."
+  },
+
+  "africaMark": {
+    "path": "M66.05,62.35l-15.01,19.56h-11.48l-10.34-39.32H9.86L0,19.69,21.3,0l17.69,6.93,13.78.8,11.69,18.77,10.2,4.71-9.51,19.13.89,12ZM71.21,65.49l-6.58,8.53,6.93,3.02,3.2-8.62-3.55-2.93Z",
+    "viewBox": "0 0 74.76 81.9",
+    "svgFile": "assets/africa-mark.svg",
+    "whereInThisSystem": "Só dentro do selo: no cabeçalho de todo slide de conteúdo e no fechamento. Nunca solto num slide do Itaú, nunca como marcador, nunca sangrando.",
+    "fills": ["gradiente (sobre branco)", "branco chapado (sobre laranja, preto e azul)"],
+    "rule": "Todas as proibições de africa-brand-tokens.json v1.2 continuam valendo: nunca rotacionar, espelhar, distorcer, arredondar, contornar, sombrear, extrudar ou redesenhar."
+  },
+
+  "seal": {
+    "composition": "Mark da Africa ao centro (gradiente sobre branco, branco chapado sobre cor), anel externo com AFRICA CREATIVE/™ repetido em Miletus Grotesk Medium.",
+    "animation": "spin 12s linear infinite, só o anel.",
+    "role": "O cabeçalho de todo slide de conteúdo, no canto superior esquerdo, 4.4cqw, fora da margem, alinhado com os botões B e N. E o centro do fechamento, em 15cqw.",
+    "source": "africa-brand-tokens.json v1.2, seal · Master Slides da Africa v4.3, cabeçalho"
+  },
+
+  "emphasis": {
+    "hl": {
+      "role": "A palavra que importa, dentro do título ou do statement. Uma por slide, até três palavras.",
+      "mechanism": "Bloco laranja varrendo em scaleX com a palavra em branco revelada por clip-path. Mesma mecânica do grifo da Africa, com a tinta do Itaú e o raio pequeno do Itaú (.4cqw).",
+      "onOrange": "Sobre fundo laranja o bloco vira branco e a palavra, laranja.",
+      "derivedFrom": "africa-brand-tokens.json v1.2, emphasis..af-hl + --ids_color_text_highlight #FF6200 + --ids_size_cornerRadius_smallButton"
+    },
+    "ul": { "role": "Sublinhado de 1px que se desenha. Modificador .act troca para laranja.", "derivedFrom": "africa emphasis .af-ul" },
+    "text": {
+      "role": "O segundo acento: uma linha inteira ou uma palavra em laranja, sem o bloco. Nunca corpo de texto.",
+      "mechanism": ".fa-ora{color:var(--laranja)}. Na narrativa, [texto]. Entra com o fa-in da própria linha, sem varredura.",
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2 (a palavra da capa e a segunda linha do Main KPI). No template, Capa 07 e Statement 07."
+    },
+    "rule": "Um acento por slide: o grifo em bloco ou o acento de texto. O grifo duplo só nas órbitas (Título 04)."
+  },
+
+  "shape": {
+    "radius": {
+      "card": { "cqw": 0.8, "px": 16, "use": "Marcador de imagem, painel, célula de grade de imagens.", "source": "--ids_size_cornerRadius_card_01: 1rem" },
+      "small": { "cqw": 0.4, "px": 8, "use": "O bloco do grifo, tag.", "source": "--ids_size_cornerRadius_smallButton: .5rem" },
+      "layout": { "cqw": 1.25, "px": 24, "use": "Contêiner grande, meia tela de imagem quando não sangra.", "source": "--ids_size_cornerRadius_layout_02: 1.5rem" },
+      "pill": { "value": "999px", "use": "Só a UI fixa (botões redondos), como na Africa." }
+    },
+    "rule": "A quina é do Itaú: contêiner de imagem e painel levam 16px. O dado é da Africa: barra, filete e painel de dado ficam retos. Tipo nunca leva contêiner arredondado, exceto o bloco do grifo.",
+    "borders": { "hairline": "1px (--ids_size_border_small: .0625rem)", "medium": "2px", "large": "4px" }
+  },
+
+  "grid": {
+    "frame": "16:9 fixo, 100cqw por 56.25cqw. Tudo em cqw.",
+    "margin": "5.2cqw nos quatro lados",
+    "columns": 12, "column": "6cqw", "gutter": "1.6cqw", "field": "4cqw", "unit": ".8cqw",
+    "formula": "span de N colunas = 7.6N - 1.6",
+    "anchors": { "sealCorner": "y até 5.3cqw", "canvasStart": "10.4cqw", "foot": "51.05cqw" },
+    "source": "Master Slides da Africa v4.3, README seção 1. Herdado sem alteração: é a assinatura estrutural da agência.",
+    "itauSpacingNote": "O site do Itaú usa base de 4px (--ids_spacing_1x: .25rem). A unidade de respiro do deck, .8cqw, vale 15.4px em 1920: quatro passos do Itaú. Registro, não regra."
+  },
+
+  "motion": {
+    "easings": {
+      "expoOut": { "curve": "cubic-bezier(.19,1,.22,1)", "duration": ".5s", "role": "A principal. É ao mesmo tempo o expo out da Africa e o --ids_motion_easing_effective_decelerate_02 do Itaú. Os dois sistemas se encontram nesta curva." },
+      "inOutStrong": { "curve": "cubic-bezier(.87,0,.13,1)", "duration": ".6s", "role": "Peso nos dois lados: painel, float das pedras. Africa." },
+      "slowIn": { "curve": "cubic-bezier(.16,1,.3,1)", "duration": "1.4s", "role": "Entrada lenta: hero e statement. Africa." },
+      "vivid": { "curve": "cubic-bezier(.22,1,.36,1)", "duration": ".45s no site; .8s e 1.2s nas batidas", "role": "Registrado do Itaú (--ids_motion_easing_vivid_decelerate_on). Em uso desde 17/09/2026 nas batidas: faOrbFreeze (o contorno das órbitas cresce e congela, .8s) e faEcoPulse (a batida do núcleo do ecossistema, 1.2s)." },
+      "microHover": { "curve": "ease", "duration": ".2s", "role": "Estado de interface." }
+    },
+    "itauTimes": { "note": "Escala de tempo do site: fast 100 a 200ms, moderate 250 a 350ms, slow 400 a 500ms, superslow 600 a 800ms.", "source": "--ids_motion_time_*" },
+    "loops": [
+      "spin 12s do selo (Africa)",
+      "afFloat 3s das pedras e do mark (Africa, só translação em Y)",
+      "faResBreath 6s: a Moldura respira, escala 1 a 1.06 (3% quando aberta)",
+      "faAnaRes 3.6s e faAnaPulse 3.6s: os contornos da anatomia em onda (escala 1.10) e a pedra a 3%",
+      "faEcoSpin 16, 22, 29, 37 e 46s por volta: os pontos circulam nas órbitas do ecossistema, de dentro para fora",
+      "faEcoTwinkle 1.9s: o brilho dos pontos, cada um no seu tempo",
+      "faEcoBreath 5s: a respiração do núcleo do ecossistema"
+    ],
+    "loopsNote": "Lista fechada desde 17/09/2026 (o check do template só aceita estes). Nada gira além do selo, das órbitas dos pontos e do nome que desliza 6 graus na curva. As órbitas do Título 04 e a máquina de escrever param: quando a segunda faixa congela e quando a última linha se escreve, acabou.",
+    "rule": "Reveal escalonado com --d de .06s a .1s entre irmãos. Nenhum slide 100% estático. O observer re-anima na revisita. Toda animação da camada de movimento (fa-) dispara em .slide.visible por tempo (--d0, --dur, --n) e termina num estado final que fica; impressão e movimento reduzido mostram esse estado."
+  },
+
+  "patterns": {
+    "note": "Os componentes vivos de 17/09/2026. Tudo aqui é criação da Africa (deck Itaú fim de ano V2, aprovado slide a slide), não fato do Itaú: derivação declarada, nunca source. Os valores vêm do módulo Projetos/P16-itau-design-system/scripts/itau_components.py e de src/04-camada.css (prefixo fa-); quem muda a forma, muda lá. Cada padrão só corre em .slide.visible, por tempo (--d0 é o instante em que a peça entra, --dur a duração, --n os passos), e termina num estado final que fica; impressão e movimento reduzido mostram esse estado.",
+    "movimento": {
+      "role": "As primitivas da língua do movimento: como as coisas entram. Quatro verbos, um relógio.",
+      "anatomy": "Entra (.fa-in): opacidade 0 a 1 subindo 1cqw; .slow sobe 1.4cqw. Desenha-se (.fa-draw): stroke-dasharray 1 com pathLength=1 no SVG, até stroke-dashoffset 0. Nasce (.fa-pop): escala 0 a 1. Pulsa (.fa-pulse): 0, 1.16, 1.",
+      "motion": { "keyframes": ["faIn", "faDraw", "faPop", "faPulse"], "duration": "faIn .9s (.slow 1.4s), faDraw --dur (1s), faPop .7s, faPulse 1s", "easing": "expoOut cubic-bezier(.19,1,.22,1); .slow com slowIn cubic-bezier(.16,1,.3,1)", "loop": false },
+      "surfaces": ["branca", "laranja", "preta", "azul", "azulMarinho"],
+      "rules": [
+        "Tempo por variável: --d0 é o instante em que a peça entra, --dur a duração, --n o número de passos.",
+        "Tudo dispara em .slide.visible (o observer do template) e termina num estado final que fica.",
+        "Impressão e movimento reduzido mostram o estado final.",
+        "Nunca vector-effect junto com pathLength: o Chrome tracejaria a linha."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2. A curva de entrada é o expo out da Africa, que é o decelerate_02 do Itaú (motion.easings.expoOut).",
+      "firstUse": "Deck Itaú fim de ano V2 (17/09/2026); no template, todos os slides de 17/09 e a folha Biblioteca · Movimento."
+    },
+    "tituloCurto": {
+      "role": "O degrau entre o Título (5.6cqw) e o Subtítulo (2.6): a frase da Moldura quando a linha mais larga passa de 17 caracteres.",
+      "anatomy": ".ttl-s: Itau Display 700, 4.6cqw, entrelinha 1.06, tracking -.025em. Ver typography.scale.titleShort.",
+      "motion": { "keyframes": ["faIn"], "duration": ".9s", "easing": "expoOut cubic-bezier(.19,1,.22,1)", "loop": false },
+      "surfaces": ["branca", "laranja", "preta", "azul", "azulMarinho"],
+      "rules": [
+        "Régua pela linha mais larga da frase: até 12 caracteres, Statement (8cqw); até 17, Título (5.6); acima, Título curto (4.6).",
+        "Até três linhas; quatro num statement sem apoio.",
+        "Um acento por slide.",
+        "Corpo explícito: a narrativa pode declarar o corpo em cqw (o Main KPI usa 4.8, entrelinha 1.16, caixa de 92cqw)."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2. Régua medida no deck: a Figtree 700 rende cerca de 0,47em por caractere; a abertura da Moldura tem 70cqw e a frase fica em até 46.",
+      "firstUse": "Deck Itaú fim de ano V2 (17/09/2026); no template, Statement 06 e 07."
+    },
+    "acentoTexto": {
+      "role": "O segundo acento: uma linha inteira ou uma palavra em laranja, sem o bloco do grifo.",
+      "anatomy": ".fa-ora{color:var(--laranja)}. Na narrativa, [texto]. Entra com o fa-in da própria linha. Ver emphasis.text.",
+      "motion": { "keyframes": ["faIn"], "duration": ".9s", "easing": "expoOut cubic-bezier(.19,1,.22,1)", "loop": false },
+      "surfaces": ["preta (Capa 07)", "azulMarinho (Statement 07)"],
+      "rules": [
+        "Nunca corpo de texto: uma linha inteira ou uma palavra.",
+        "Convive com o grifo em bloco ({texto}, .hl), um acento por slide; o grifo duplo só nas órbitas."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2 (a palavra da capa e a segunda linha do Main KPI).",
+      "firstUse": "A capa e o Main KPI do deck V2; no template, Capa 07 e Statement 07."
+    },
+    "moldura": {
+      "role": "A frase com os contornos da pedra: a ressonância da capa levada aos slides de frase. Uma abertura de palco em volta do texto.",
+      "anatomy": "Seis contornos da pedra (superelipse n=4,3, 360 pontos) numa caixa de 120cqw centrada, maior que o slide: aparecem só os arcos laterais. Meias larguras 29, 31.6, 34.2, 36.8, 39.4 e 42 na caixa 0..100; opacidades .95 a .24; atrasos de .25s entre eles; traço .16; desfoque .1cqw (veludo, não linha). Anatomia do slide: o marcador de pedra (1.7cqw, laranja; branco sobre laranja) acima, a frase centrada (até 80cqw), embaixo o apoio cinza (corpo regular, 51.6cqw) ou o ritmo (legenda em caixa alta com itens que entram um a um, separados pela pedra miúda de .6cqw, e o fecho em corpo grande branco, 66cqw), ou a legenda miúda acima da frase (.fa-kk, o Main KPI).",
+      "motion": { "keyframes": ["faResIn", "faResBreath", "faPulse", "faIn"], "duration": "faResIn 1.6s; faResBreath 6s; o marcador faPulse 1s", "easing": "slowIn cubic-bezier(.16,1,.3,1) na entrada; ease-in-out na respiração", "loop": "faResBreath: escala 1, 1.06, 1 (3% quando aberta, --br)" },
+      "surfaces": ["laranja: laranja escuro #E55800, --k 1", "preta: laranja, --k .55", "branca: laranja, --k .28", "azul e azulMarinho: branco, --k .3"],
+      "rules": [
+        "Abre para a frase: linha mais larga estimada acima de 60cqw (0,47em por caractere), escala 1.12; acima de 78cqw, 1.2. Nada cruza letra, nem no pico da respiração (medido).",
+        "Corpo pela linha mais larga: Statement até 12 caracteres, Título até 17, Título curto acima. Até três linhas, um acento.",
+        "Entra em todo slide de frase; o poema é bare, sem Moldura.",
+        "O desfoque leve dos contornos é veludo, não sombra: a pedra sólida continua sem sombra ou volume."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2. Referência: opção A do burst de 17/09, escolhida pelo Bruno; a ressonância da capa levada às frases.",
+      "firstUse": "Slide 2 do deck V2; no template, Statement 05 (laranja, ritmo e fecho), 06 (preta) e 07 (azul marinho, legenda e acento de texto)."
+    },
+    "anatomiaCapa": {
+      "role": "A capa com a anatomia da pedra: forma, contorno e o logo. O quadrado de quinas redondas vira a pedra, os contornos respiram, por último chega o logo.",
+      "anatomy": "O morph: d: path() do quadrado (superelipse n=9) à pedra (n=4,3), os dois paths com 360 pontos, gerado no build (anatomy_css). Quatro contornos concêntricos (escalas 1.12, 1.26, 1.42 e 1.60; opacidades .80 a .30; atrasos de .3s). Por último o logo: use href=#itau em laranja sobre uma pedra branca 4% menor (as letras do vetor do Commons são vazadas). Layout: título à esquerda (Statement, três linhas, o acento de texto numa palavra), subtítulo em corpo grande regular; a anatomia à direita (42cqw). Slide preto, bare (sem selo).",
+      "motion": { "keyframes": ["faAnaForm", "faShow", "faAnaRingIn", "faAnaRes", "faAnaPulse"], "duration": "faAnaForm 1.5s a partir de .3s; faAnaRingIn .9s; faAnaRes 3.6s; faAnaPulse 3.6s; o logo em 3.8s (faShow 1.1s)", "easing": "slowIn no morph; expoOut na entrada dos contornos; ease-in-out na onda", "loop": "faAnaRes (os contornos em onda, escala 1.10) e faAnaPulse (a pedra a 3%), a partir de 1.8s" },
+      "surfaces": ["preta"],
+      "rules": [
+        "A primeira onda parte quando o título pousa (1.8s).",
+        "Exceção declarada: o logo do Itaú sobre preto, só aqui e no núcleo do ecossistema; token pendente de confirmação com o brand center.",
+        "Sem selo (bare)."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2. Referência real: o filme da Pentagram para a identidade do Itaú (2024), pentagram.com/work/banco-itau: o quadrado de quinas redondas vira a pedra e os contornos em relevo respiram (trecho 6,1s a 7,0s do sizzle).",
+      "firstUse": "A capa do deck V2; no template, Capa 07."
+    },
+    "orbitas": {
+      "role": "A pedra-coração e a Matéria: a pedra com um texto dentro bate e deposita as faixas onde vivem os sinais e os assuntos.",
+      "anatomy": "A pedra com um texto dentro (ID, 34px na caixa 100) bate duas vezes (aos .6s e 2.0s); cada batida solta um contorno dela mesma que cresce e congela numa faixa cheia, tom sobre tom (--stage). ViewBox 64×46 em cqw; faixas: interna 7.5 a 9.4, externa 15.3 a 16.9. Na primeira faixa, quatro pontos laranja (os sinais) por perímetro igual; na segunda, sete pontos pretos com hastes (.3 a 1.2) e os rótulos (legenda) a 1.2cqw do ponto, ancorados pelo lado e virados para cima ou para baixo quando vazariam de 104cqw. Layout: título à esquerda (4cqw, três linhas), apoio em três linhas fixas (corpo pequeno), o bloco centrado na altura do diagrama; o diagrama com o centro em 84cqw (75% do quadro).",
+      "motion": { "keyframes": ["faOrbIn", "faHeart", "faOrbFreeze", "faShow", "faPop", "faDraw", "faIn"], "duration": "faOrbIn 1.2s; faHeart 1.4s, duas vezes; faOrbFreeze .8s até --to; as faixas chegam em 1.4s e 2.8s", "easing": "vivid cubic-bezier(.22,1,.36,1) no congelar; ease-out na batida", "loop": false },
+      "surfaces": ["branca (Título 04); sobre preto e azul a figura troca as cores com a superfície"],
+      "rules": [
+        "Quando a segunda faixa congela, acabou: nada em loop.",
+        "Grifo duplo permitido, só aqui (Título 04).",
+        "Pontos por perímetro igual, não por ângulo; rótulos a distância constante do ponto."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2. Referência: o One Sheeter do Yummly (Creative Pack 2021, p. 145 a 151), faixas de matéria depositadas.",
+      "firstUse": "Slide 4 do deck V2; no template, Título 04."
+    },
+    "poemaMaquina": {
+      "role": "A página dupla de livro de poesia, escrita à máquina: cada linha se escreve em passos de um caractere, na ordem de leitura.",
+      "anatomy": "À esquerda o título modesto (o Subtítulo) e as estrofes; à direita a litania, o veredito e a linha fina com o grifo. Colunas de 26 e 30cqw a partir de 9cqw da borda e 8 do alto, 10cqw entre elas; corpo 1.5cqw, regular, entrelinha 1.55, uma tinta só. Slide bare, sem Moldura.",
+      "motion": { "keyframes": ["faTw"], "duration": "22ms por caractere (mínimo .25s), .18s entre linhas, .5s entre estrofes; o grifo .5s depois da sua linha", "easing": "steps(n, end): um passo por caractere", "loop": false },
+      "surfaces": ["branca"],
+      "rules": [
+        "Cada linha é um clip-path inset(0 100% 0 -.5em) que abre em steps(n); meio caractere de folga para o grifo transbordar.",
+        "Ordem de leitura: página esquerda, depois direita; o build soma as durações.",
+        "Nada em loop; sem Moldura, sem selo."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2.",
+      "firstUse": "Slide 6 do deck V2; no template, Conteúdo 05."
+    },
+    "ecossistema": {
+      "role": "O guia de um sistema com partes que coexistem: o núcleo, cinco órbitas com nome e função na curva, os pontos-cometa que circulam. Três estágios: nasce, momento, camada.",
+      "anatomy": "ViewBox 50×50 em cqw, centro 25,25; a caixa a 59cqw da esquerda e 6.4 do alto (centro do diagrama em 84cqw, 43cqw de diâmetro). O núcleo é o logo do Itaú (pedra de meia largura 4.6, a branca por baixo 4% menor) com brilho radial (raio 11, só sobre preto e azul). Cinco linhas em 9.2, 12.3, 15.4, 18.5 e 21.6 (traço .08; branco a 50% sobre preto, preto a 32% sobre branco); cada faixa vai da linha de dentro (ou da quina da pedra, 6.0) até a própria linha; o nome (legenda .92px, tracking .14em) e a função (1.05px, cinza) vivem na curva da faixa, no alto (textPath, startOffset 50%, raio igual ao meio da faixa menos .15). Pontos-cometa: ponto laranja de raio .38, halo em degradê radial laranja (raio 1.05), cauda em quatro trechos de arco de 6.5cqw (no máximo 40 graus), largura .30 a .10, opacidade .6 a .08; 3, 4, 5, 6 e 7 pontos por linha, 25 no total. Layout à esquerda: título lateral (4cqw) com apoio (Sistema 01); no momento e na camada, a coluna de 52cqw: legenda miúda (.fa-eco-kk), a função como título (o nome na primeira linha, o grifo na função), o incipit em corpo regular (linha única até 70 caracteres), a definição em corpo pequeno cinza (linha única até 90), a tabela.",
+      "motion": { "keyframes": ["faEcoIn", "faEcoBreath", "faEcoPulse", "faEcoRing", "faEcoLb", "faEcoSpin", "faEcoTwinkle", "faEcoGlow", "faEcoShine", "faEcoNmOn", "faDraw", "faShow"], "duration": "Nasce: o núcleo bate (faEcoPulse 1.2s, forwards, nasce escondido atrás do logo) e a linha nasce de dentro para fora (faEcoRing .9s), o nome desliza na curva (faEcoLb 1s, -6 graus a 0), passo de 1.1s a partir de 1.8s; a legenda da camada entra em 8.0s e brilha três vezes (faEcoShine e faEcoGlow, 1.4s cada, a partir de 8.7s); a cada brilho, uma leva de pontos nasce em todas as linhas. Momento: tudo entra pronto, o núcleo bate uma vez (.5s) e a faixa se acende (duas metades em faDraw 1.3s a partir de .8s, cada uma passando 3 graus do fundo). Camada: sem faixa, sem brilho, sem batida.", "easing": "vivid cubic-bezier(.22,1,.36,1) na batida; expoOut nas entradas; linear na circulação", "loop": "faEcoSpin (16, 22, 29, 37 e 46s por volta, de dentro para fora), faEcoTwinkle (1.9s, cada ponto no seu tempo), faEcoBreath (5s, o brilho do núcleo)" },
+      "surfaces": ["preta (Sistema 01 a 03); o brilho só existe sobre preto e azul, sobre branco viraria mancha"],
+      "rules": [
+        "Nada circula antes da legenda brilhar.",
+        "Momento: só os pontos da linha do momento ficam laranja, os outros na cor das linhas a 40%; linhas dos outros momentos a 45%, nomes por vir em cinza a 45%; as faixas já vistas em laranja a 12%; o nome fica preto (--preto) sobre o laranja.",
+        "Camada: só as linhas, os nomes apagados e os pontos de todas as linhas em laranja, circulando.",
+        "Nada gira além das órbitas dos pontos e do nome que desliza 6 graus na curva.",
+        "Exceções declaradas: o logo do Itaú sobre preto no núcleo (token pendente com o brand center); a sombra difusa só no halo do brilho da legenda (faEcoGlow)."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2. Referências: as prévias do 21st.dev lidas quadro a quadro (o chronos engine: núcleo que brilha, órbitas concêntricas, partículas em velocidades diferentes); o duplo diamante do Africa Decoded como régua de qualidade.",
+      "firstUse": "A arquitetura e os movimentos do deck V2 (slides 10 a 16); no template, Seção · Sistema e Sistema 01 (nasce), 02 (momento) e 03 (camada)."
+    },
+    "tabelas": {
+      "role": "Duas tabelas de fio: a de fios, que entra linha a linha, e a que se destaca linha a linha.",
+      "anatomy": "Tabela de fios (.fa-rows): grade legenda (7.6cqw) + corpo pequeno, fio de 1px (--hair) entre linhas, uma linha por item (até 68 caracteres; acima, a tabela alarga para 56cqw e segue em linha única). Tabela que se destaca (.fa-rows.amb): coluna dos rótulos de 11cqw, o nome em laranja.",
+      "motion": { "keyframes": ["faIn", "faAmbLine", "faEcoShine", "faShow"], "duration": "fios: .18s entre linhas; destaque: .45s entre linhas, o fio se desenha em .8s, o facho em 1.3s, o corpo entra .35s depois", "easing": "expoOut cubic-bezier(.19,1,.22,1)", "loop": false },
+      "surfaces": ["preta (Sistema 02 e 03)", "branca"],
+      "rules": [
+        "Uma linha por item.",
+        "Na que se destaca, o fio de cima se desenha da esquerda para a direita, o nome recebe o facho de luz (o mesmo da legenda do sistema) e o corpo entra em seguida; o fio de baixo fecha a tabela no fim."
+      ],
+      "derivedFrom": "Criação da Africa, 17/09/2026, deck Itaú fim de ano V2.",
+      "firstUse": "Os movimentos e a camada do deck V2; no template, Sistema 02 (fios) e 03 (destaque)."
+    }
+  },
+
+  "closing": {
+    "mandatory": true,
+    "sentence": "Somos a Africa: a agência que nasce e se desafia todos os dias, para nunca deixar de ser a Africa Creative/™.",
+    "slogan": "A agência das marcas mais desejadas, admiradas e valiosas do Brasil.",
+    "cobrandLine": "itaú × Africa Creative/™ · desde 2002",
+    "rule": "Fechamento é o penúltimo, slogan é o último, nenhum dos dois editado. Herdado do Master Slides da Africa. É onde a Africa fala com a própria voz (Pangaia) num deck do Itaú."
+  },
+
+  "verification": {
+    "verified": [
+      "Laranja #FF6200 e todos os hex do Itaú: tokens oficiais do site (tokens_idl/varejo.css, itau.com.br, snapshot Wayback 2025, cópia em Projetos/P16-itau-design-system/fontes/).",
+      "Famílias Itau Display (700) e Itau Text (400/700/900): mesmos tokens.",
+      "Raios, bordas, espaçamento e curvas de movimento: mesmos tokens.",
+      "Forma do logo e cor: vetor e PNG do Wikimedia Commons (PD-textlogo).",
+      "Conceito, data, processo e equipe do rebrand: GKPB, Janela, Fabio Haag Type, Design Conceitual, Brazil Journal.",
+      "Itaú cliente da Africa desde 2002 e os dois trabalhos citados: site da Africa."
+    ],
+    "notVerified": [
+      "O brand book oficial do Itaú (o PDF de identidade 2023): não foi visto. Tudo aqui vem do site e da imprensa. Regras de área de proteção do logo, versões monocromáticas, versão do logo sobre laranja e sobre preto: não afirmadas.",
+      "A escala de pesos completa da Itau Display e a existência de um Light em uso: a família tem seis pesos (Behance), mas o site só usa 700.",
+      "O nome oficial da forma solta (pedra) e a permissão de usá-la como contêiner: descrição vem de fonte de terceiros (designmd.app). Aqui é derivação declarada.",
+      "Cores oficiais dos segmentos Uniclass, Personnalité, BBA e Private: a imprensa fala em azuis e tons escuros; o token #000066 é o secundário do varejo, não necessariamente o de cada segmento.",
+      "Fotografia, ilustração e grafismos da identidade 2023: nada afirmado.",
+      "Prêmios, número de clientes, número de agências, market share: nada afirmado."
+    ],
+    "rule": "Nenhum entregável deste sistema afirma nada da lista acima. Dado de campanha, de mídia ou de negócio entra só no deck de verdade, com fonte em legenda."
+  },
+
+  "files": {
+    "brandTokens": "Clientes/Itaú/Design System/itau-brand-tokens.json",
+    "designSystem": "Clientes/Itaú/Design System/itau-design-system.html",
+    "brandBookHtml": "Clientes/Itaú/Design System/itau-brand-book-a4.html",
+    "brandBookPdf": "Clientes/Itaú/Design System/itau-brand-book-a4.pdf",
+    "slidesTemplate": "Clientes/Itaú/Master Slides/itau-slides-template.html",
+    "slidesManual": "Clientes/Itaú/Master Slides/README.md",
+    "slidesContext": "Clientes/Itaú/Master Slides/context.md",
+    "decks": "Clientes/Itaú/presentations/",
+    "logoAsset": "Clientes/Itaú/Design System/assets/itau-logo-2023-commons.svg",
+    "pedraAsset": "Clientes/Itaú/Design System/assets/itau-pedra.svg",
+    "africaMark": "Clientes/Itaú/Design System/assets/africa-mark.svg",
+    "fonts": "Clientes/Itaú/Design System/fonts/ (Figtree VF latin + latin-ext, MiletusGrotesk-Medium, PPPangaia-Light)",
+    "project": "Projetos/P16-itau-design-system/ (contexto, dossiê com fontes, verificador, build)",
+    "components": "Projetos/P16-itau-design-system/scripts/itau_components.py (os componentes vivos de 17/09: a Moldura, a anatomia, as órbitas, o poema, o ecossistema, as tabelas)",
+    "motionCss": "Projetos/P16-itau-design-system/src/04-camada.css (a camada de movimento, prefixo fa-)",
+    "dsPatterns": "Projetos/P16-itau-design-system/scripts/ds-patterns.py (injeta os quadros vivos na seção 09 do design system)",
+    "africaSource": "Clientes/Africa/Design System/africa-brand-tokens.json v1.2 · Clientes/Africa/Master Slides/ v4.3"
+  }
+}

@@ -1,0 +1,23 @@
+# As duas fontes licenciadas da Africa NUNCA entram neste repositório público.
+# São fontes pagas: publicá-las seria redistribuição. Ver design-system/fonts/README.md
+MiletusGrotesk*.woff2
+MiletusGrotesk*.woff
+MiletusGrotesk*.otf
+MiletusGrotesk*.ttf
+PPPangaia*.woff2
+PPPangaia*.woff
+PPPangaia*.otf
+PPPangaia*.ttf
+
+# Cruft de OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Provas de render, que se refazem sozinhas
+provas/
+*.tmp
