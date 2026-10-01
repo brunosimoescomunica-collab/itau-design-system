@@ -8,6 +8,14 @@ Este repositório é o sistema de marca que a Africa usa para apresentar ao Ita�
 
 ---
 
+## Se você só quer fazer slides no ChatGPT
+
+Baixe **um arquivo**: [`PARA-O-CHATGPT.md`](PARA-O-CHATGPT.md). Arraste ele para uma conversa nova no ChatGPT. Escreva `@Presentations` e o assunto. É isso.
+
+O resto deste repositório é para quem vai mexer no sistema.
+
+---
+
 ## Baixar
 
 ```bash
@@ -55,8 +63,8 @@ itau-design-system/
 ├── docs/
 │   ├── dossie-itau.md                A pesquisa, com fonte por fato
 │   └── COMPONENTES.md                O índice dos componentes
+├── PARA-O-CHATGPT.md                 Um arquivo só: arraste no ChatGPT e peça o deck
 ├── prompts/
-│   ├── CHATGPT.md                    Como pôr o sistema no ChatGPT, com os prompts prontos
 │   ├── CLAUDE.md                     Para Claude e Claude Code
 │   ├── AGENTS.md                     Para Codex e agentes que leem AGENTS.md
 │   └── COWORK-GOOGLE-SLIDES.md       Para montar isto no Google Slides
@@ -145,11 +153,9 @@ Nunca monte um slide a partir de uma classe CSS achada no arquivo. A classe é c
 
 ## Usar com agente de IA
 
-A pasta [`prompts/`](prompts/) tem quatro arquivos, um por ferramenta:
-
 | Arquivo | Para quem | O que faz |
 |---|---|---|
-[`prompts/CHATGPT.md`](prompts/CHATGPT.md) | **Comece por aqui se você usa ChatGPT** | Como pôr o sistema dentro do ChatGPT e os prompts prontos. Explica por que o ChatGPT não consegue clonar o repositório, e o que fazer em vez disso. |
+[`PARA-O-CHATGPT.md`](PARA-O-CHATGPT.md) | **ChatGPT. Comece por aqui** | Um arquivo só. Arraste no ChatGPT, escreva `@Presentations` e o assunto. |
 [`prompts/CLAUDE.md`](prompts/CLAUDE.md) | Claude e Claude Code | Carrega o sistema e as regras duras. Copie para a raiz do seu projeto. |
 [`prompts/AGENTS.md`](prompts/AGENTS.md) | Codex e qualquer agente que leia `AGENTS.md` | O mesmo contrato, no formato que o Codex procura. Copie para a raiz do repositório e ele entra sozinho. |
 [`prompts/COWORK-GOOGLE-SLIDES.md`](prompts/COWORK-GOOGLE-SLIDES.md) | Cowork, ChatGPT Work e Codex | Prompt pronto para montar este sistema direto no Google Slides, com a conversão de medidas. |
